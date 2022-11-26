@@ -5,7 +5,6 @@ import React from "react";
 export default function Home() {
   const firstPokemon = trpc.getById.useQuery({ id: 1 });
   const secondPokemon = trpc.getById.useQuery({ id: 2 });
-  //console.log("data", JSON.stringify(data, null, 2));
 
   if (firstPokemon.isLoading || secondPokemon.isLoading) {
     return <div>Loading...</div>;
